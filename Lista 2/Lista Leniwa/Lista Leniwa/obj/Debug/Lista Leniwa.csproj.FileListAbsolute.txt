@@ -1,0 +1,6 @@
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Lista Leniwa\Lista Leniwa\bin\Debug\Lista Leniwa.exe.config
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Lista Leniwa\Lista Leniwa\bin\Debug\Lista Leniwa.exe
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Lista Leniwa\Lista Leniwa\bin\Debug\Lista Leniwa.pdb
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Lista Leniwa\Lista Leniwa\obj\Debug\Lista Leniwa.csprojResolveAssemblyReference.cache
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Lista Leniwa\Lista Leniwa\obj\Debug\Lista Leniwa.exe
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Lista Leniwa\Lista Leniwa\obj\Debug\Lista Leniwa.pdb

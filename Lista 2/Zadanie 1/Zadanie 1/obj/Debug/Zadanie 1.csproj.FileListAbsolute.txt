@@ -1,0 +1,6 @@
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Zadanie 1\Zadanie 1\bin\Debug\Zadanie 1.exe.config
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Zadanie 1\Zadanie 1\bin\Debug\Zadanie 1.exe
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Zadanie 1\Zadanie 1\bin\Debug\Zadanie 1.pdb
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Zadanie 1\Zadanie 1\obj\Debug\Zadanie 1.csprojResolveAssemblyReference.cache
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Zadanie 1\Zadanie 1\obj\Debug\Zadanie 1.exe
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 2\Zadanie 1\Zadanie 1\obj\Debug\Zadanie 1.pdb

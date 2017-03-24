@@ -1,0 +1,6 @@
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\PrimeCollection\PrimeCollection\bin\Debug\PrimeCollection.exe.config
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\PrimeCollection\PrimeCollection\bin\Debug\PrimeCollection.exe
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\PrimeCollection\PrimeCollection\bin\Debug\PrimeCollection.pdb
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\PrimeCollection\PrimeCollection\obj\Debug\PrimeCollection.csprojResolveAssemblyReference.cache
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\PrimeCollection\PrimeCollection\obj\Debug\PrimeCollection.exe
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\PrimeCollection\PrimeCollection\obj\Debug\PrimeCollection.pdb

@@ -1,0 +1,6 @@
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\Slownik\Slownik\bin\Debug\Slownik.exe.config
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\Slownik\Slownik\obj\Debug\Slownik.csprojResolveAssemblyReference.cache
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\Slownik\Slownik\bin\Debug\Slownik.exe
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\Slownik\Slownik\bin\Debug\Slownik.pdb
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\Slownik\Slownik\obj\Debug\Slownik.exe
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\Slownik\Slownik\obj\Debug\Slownik.pdb

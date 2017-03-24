@@ -1,0 +1,5 @@
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\slownikclass\slownikclass\bin\Debug\slownikclass.dll
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\slownikclass\slownikclass\bin\Debug\slownikclass.pdb
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\slownikclass\slownikclass\obj\Debug\slownikclass.csprojResolveAssemblyReference.cache
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\slownikclass\slownikclass\obj\Debug\slownikclass.dll
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 3\slownikclass\slownikclass\obj\Debug\slownikclass.pdb

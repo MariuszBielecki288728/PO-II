@@ -1,0 +1,6 @@
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\Gramatyki\Gramatyki\bin\Debug\Gramatyki.exe.config
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\Gramatyki\Gramatyki\bin\Debug\Gramatyki.exe
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\Gramatyki\Gramatyki\bin\Debug\Gramatyki.pdb
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\Gramatyki\Gramatyki\obj\Debug\Gramatyki.csprojResolveAssemblyReference.cache
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\Gramatyki\Gramatyki\obj\Debug\Gramatyki.exe
+C:\Users\manie\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\Lista 4\Gramatyki\Gramatyki\obj\Debug\Gramatyki.pdb
