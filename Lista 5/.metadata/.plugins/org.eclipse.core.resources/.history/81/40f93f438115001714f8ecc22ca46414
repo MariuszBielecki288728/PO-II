@@ -1,0 +1,11 @@
+package pakiet;
+
+public class Pomnoz extends Node {
+
+	@Override
+	public int oblicz() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

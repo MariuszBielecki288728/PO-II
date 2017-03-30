@@ -1,0 +1,12 @@
+package pakiet;
+
+import java.io.Console;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("HW");
+	}
+
+}

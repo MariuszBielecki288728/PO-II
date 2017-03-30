@@ -1,0 +1,5 @@
+package pakiet;
+
+abstract class Zmienna extends Wyrazenie  {
+	
+}

@@ -1,0 +1,14 @@
+package pakiet;
+
+import java.util.Hashtable;
+
+public class MainClass {
+	
+	public static void main(String[] args) {
+		Wyrazenie.numbers = new Hashtable<String, Integer>();
+		Wyrazenie.numbers.put("x", 5);
+		Wyrazenie wyrazenie = new Dodaj(new Stala(4), new Zmienna("x"));
+		System.out.println(wyrazenie.oblicz());
+	}
+
+}

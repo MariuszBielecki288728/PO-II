@@ -1,0 +1,8 @@
+package pakiet;
+
+class Stala extends Wyrazenie{
+	String nazwa;
+	Stala(String x){
+		this.nazwa = x;
+	}
+}

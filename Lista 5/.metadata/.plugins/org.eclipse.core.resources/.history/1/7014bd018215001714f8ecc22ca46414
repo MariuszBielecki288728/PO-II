@@ -1,0 +1,8 @@
+package pakiet;
+
+class Zmienna extends Wyrazenie  {
+	String nazwa;
+	public int oblicz(){
+		return numbers.get(nazwa);
+	}
+}

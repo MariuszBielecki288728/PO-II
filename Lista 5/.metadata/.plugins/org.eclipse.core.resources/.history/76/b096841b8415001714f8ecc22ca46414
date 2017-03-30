@@ -1,0 +1,11 @@
+package pakiet;
+
+class Stala extends Wyrazenie{
+	int x;
+	Stala(int x){
+		this.x = x;
+	}
+	public int oblicz(){
+		return this.x;
+	}
+}
