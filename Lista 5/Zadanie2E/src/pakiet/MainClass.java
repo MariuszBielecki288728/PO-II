@@ -9,7 +9,7 @@ public class MainClass {
 		Wyrazenie.numbers.put("x", 5);
 		Wyrazenie wyrazenie = new Podziel(new Dodaj(new Stala(4), new Zmienna("x"))
 				,new Pomnoz(new Stala(1), new Stala(3)));
-		System.out.println(wyrazenie.oblicz());
+		System.out.println(wyrazenie);
 	}
 
 }
