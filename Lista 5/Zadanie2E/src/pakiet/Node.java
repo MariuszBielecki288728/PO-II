@@ -7,4 +7,5 @@ abstract class Node extends Wyrazenie {
 		Left = L;
 		Right = R;
 	}
+	
 }
