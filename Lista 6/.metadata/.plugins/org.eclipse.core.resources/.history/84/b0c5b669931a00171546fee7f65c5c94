@@ -1,0 +1,52 @@
+
+import java.util.Vector;
+
+/**
+ * Created by manie on 02.04.2017.
+ */
+public class Bufor<T> {
+	int rozmiar;
+	int ile;
+	int poczatek;
+	Vector<T> buf;
+
+	Bufor(int rozmiar) {
+		this.rozmiar = rozmiar;
+		ile = 0;
+		poczatek = 0;
+		buf = new Vector<>(rozmiar);
+
+	}
+
+
+	synchronized void put(T x) {
+		while (ile == rozmiar) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+			} finally {
+			}
+		}
+		buf.set((poczatek + ile) % rozmiar, x);
+		this.ile++;
+		notify();
+
+	}
+
+	synchronized T get() {
+		while (ile == 0) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+			} finally {
+			}
+		}
+		T x = buf.get(poczatek);
+		poczatek = (poczatek + 1) % rozmiar;
+		ile--;
+		notify();
+		return x;
+
+	}
+
+}

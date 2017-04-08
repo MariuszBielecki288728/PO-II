@@ -1,0 +1,16 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+
+public class Program {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		File f = new File("nazwiska");
+		Bufor<String> buf = new Bufor<>(1000);
+		Thread t1 = new Thread(new Filter(buf, f));
+		Thread t2 = new Thread(new Sort(buf));
+		t1.start();
+		t2.start();
+
+	}
+
+}
