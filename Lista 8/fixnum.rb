@@ -1,17 +1,18 @@
 class Fixnum
-  def prime?
-    if self < 2 || self % 2 == 0
-        return false
-      end
-    i = 3
-    while i*i < self+1
+
+
+  def czynniki
+    i = 1
+    czyn = Array.[]
+    while i <= self
         if self % i == 0
-            return false
+          czyn << i
           end
-        i= i + 2
+        i += 1
       end
-    return true
+    return czyn
   end
+
 
   def ack(y)
     if self == 0
@@ -45,8 +46,6 @@ class Fixnum
     end
     return pomstr
   end
-
-
 end
 
 for i in 2..30
@@ -54,3 +53,4 @@ for i in 2..30
 end
 puts "ack(2, 1) #{2.ack(1)}"
 puts 123.slownie
+puts "#{6.czynniki}"
