@@ -7,9 +7,9 @@ class Fixnum
     while i <= self
         if self % i == 0
           czyn << i
-          end
+        end
         i += 1
-      end
+    end
     return czyn
   end
 

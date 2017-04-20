@@ -16,7 +16,7 @@ class Jawna
      end
    end
      return Zaszyfrowane.new(nowynapis)
-   end
+  end
 end
 
 
