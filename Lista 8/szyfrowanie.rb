@@ -10,7 +10,8 @@ class Jawna
     @napis.each_char do |chr|
      nchar = klucz[chr]
      if nchar == nil
-       nowynapis << chr
+       #nowynapis << chr
+       raise "niepoprawny słownik"
      else
        nowynapis << nchar
      end
@@ -34,7 +35,7 @@ class Zaszyfrowane
 end
 
 jaw = Jawna.new("ruby")
-zasz = jaw.zaszyfruj({"a"=>"b","r"=>"y", "b"=>"r", "y"=>"u", "u"=>"a"})
+zasz = jaw.zaszyfruj({"a"=>"b","x"=>"y", "b"=>"r", "y"=>"u", "u"=>"a"})
 puts "#{jaw}"
 puts "#{zasz}"
 puts "#{zasz.odszyfruj({"a"=>"b","r"=>"y", "b"=>"r", "y"=>"u", "u"=>"a"})}"

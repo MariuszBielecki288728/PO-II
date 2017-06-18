@@ -34,7 +34,7 @@ class Funkcja
 
   def pole(a, b)
     s = 0
-    n = ((b-a).abs*1000).to_int
+    n = ((b-a).abs*2000).to_int
     dx = (b-a).fdiv(n)
     for i in 1..n do
       s += @f.call(a+i*dx)
@@ -47,10 +47,12 @@ class Funkcja
     epsilon = 2**(-32)
     return (@f.call(x+epsilon)-@f.call(x-epsilon)).fdiv(2*epsilon)
   end
-
 end
 
-
+def test
 puts "#{Funkcja.new{|x| x**3*(x + Math.sin(x**2-1) - 1) - 1}.zerowe(1, 2, 0.0001)}"
 puts "#{Funkcja.new{|x| x**2 + 2*x}.pole(0, 20)}"
 puts "#{Funkcja.new{|x| x**2 + 2*x}.poch(1.2)}"
+
+end
+test
