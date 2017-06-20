@@ -32,7 +32,9 @@
             this.najPozLab = new System.Windows.Forms.Label();
             this.histOpLab = new System.Windows.Forms.Label();
             this.bilPlanBox = new System.Windows.Forms.GroupBox();
+            this.bilPlanLab = new System.Windows.Forms.Label();
             this.bilRzeczBox = new System.Windows.Forms.GroupBox();
+            this.bilRzeczLab = new System.Windows.Forms.Label();
             this.nowyBox = new System.Windows.Forms.GroupBox();
             this.DodajButton = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -51,19 +53,20 @@
             this.usunButton = new System.Windows.Forms.Button();
             this.usunZHistCheckBox = new System.Windows.Forms.CheckBox();
             this.usunGroupBox = new System.Windows.Forms.GroupBox();
-            this.usunTextBox = new System.Windows.Forms.TextBox();
             this.nazwaLab = new System.Windows.Forms.Label();
+            this.usunTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.wczytajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kontaktToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.saldoGroupBox = new System.Windows.Forms.GroupBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saldoLab = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.odswiezBut = new System.Windows.Forms.Button();
-            this.bilPlanLab = new System.Windows.Forms.Label();
-            this.bilRzeczLab = new System.Windows.Forms.Label();
+            this.facebookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stronaAutoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bilPlanBox.SuspendLayout();
             this.bilRzeczBox.SuspendLayout();
             this.nowyBox.SuspendLayout();
@@ -112,6 +115,17 @@
             this.bilPlanBox.TabStop = false;
             this.bilPlanBox.Text = "Bilans Planowany";
             // 
+            // bilPlanLab
+            // 
+            this.bilPlanLab.AutoSize = true;
+            this.bilPlanLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bilPlanLab.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bilPlanLab.Location = new System.Drawing.Point(6, 28);
+            this.bilPlanLab.Name = "bilPlanLab";
+            this.bilPlanLab.Size = new System.Drawing.Size(79, 29);
+            this.bilPlanLab.TabIndex = 0;
+            this.bilPlanLab.Text = "label1";
+            // 
             // bilRzeczBox
             // 
             this.bilRzeczBox.Controls.Add(this.bilRzeczLab);
@@ -121,6 +135,16 @@
             this.bilRzeczBox.TabIndex = 11;
             this.bilRzeczBox.TabStop = false;
             this.bilRzeczBox.Text = "Bilans rzeczywisty";
+            // 
+            // bilRzeczLab
+            // 
+            this.bilRzeczLab.AutoSize = true;
+            this.bilRzeczLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bilRzeczLab.Location = new System.Drawing.Point(6, 28);
+            this.bilRzeczLab.Name = "bilRzeczLab";
+            this.bilRzeczLab.Size = new System.Drawing.Size(79, 29);
+            this.bilRzeczLab.TabIndex = 1;
+            this.bilRzeczLab.Text = "label1";
             // 
             // nowyBox
             // 
@@ -301,13 +325,6 @@
             this.usunGroupBox.TabStop = false;
             this.usunGroupBox.Text = "Usuwanie";
             // 
-            // usunTextBox
-            // 
-            this.usunTextBox.Location = new System.Drawing.Point(56, 19);
-            this.usunTextBox.Name = "usunTextBox";
-            this.usunTextBox.Size = new System.Drawing.Size(100, 20);
-            this.usunTextBox.TabIndex = 16;
-            // 
             // nazwaLab
             // 
             this.nazwaLab.AutoSize = true;
@@ -316,6 +333,13 @@
             this.nazwaLab.Size = new System.Drawing.Size(40, 13);
             this.nazwaLab.TabIndex = 17;
             this.nazwaLab.Text = "Nazwa";
+            // 
+            // usunTextBox
+            // 
+            this.usunTextBox.Location = new System.Drawing.Point(56, 19);
+            this.usunTextBox.Name = "usunTextBox";
+            this.usunTextBox.Size = new System.Drawing.Size(100, 20);
+            this.usunTextBox.TabIndex = 16;
             // 
             // menuStrip1
             // 
@@ -346,6 +370,10 @@
             // 
             // kontaktToolStripMenuItem
             // 
+            this.kontaktToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.facebookToolStripMenuItem,
+            this.mailToolStripMenuItem,
+            this.stronaAutoraToolStripMenuItem});
             this.kontaktToolStripMenuItem.Name = "kontaktToolStripMenuItem";
             this.kontaktToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.kontaktToolStripMenuItem.Text = "Kontakt";
@@ -360,10 +388,6 @@
             this.saldoGroupBox.TabStop = false;
             this.saldoGroupBox.Text = "Saldo";
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // saldoLab
             // 
             this.saldoLab.AutoSize = true;
@@ -373,6 +397,10 @@
             this.saldoLab.Size = new System.Drawing.Size(79, 29);
             this.saldoLab.TabIndex = 0;
             this.saldoLab.Text = "label1";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // odswiezBut
             // 
@@ -384,26 +412,26 @@
             this.odswiezBut.UseVisualStyleBackColor = true;
             this.odswiezBut.Click += new System.EventHandler(this.odswiezBut_Click);
             // 
-            // bilPlanLab
+            // facebookToolStripMenuItem
             // 
-            this.bilPlanLab.AutoSize = true;
-            this.bilPlanLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bilPlanLab.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bilPlanLab.Location = new System.Drawing.Point(6, 28);
-            this.bilPlanLab.Name = "bilPlanLab";
-            this.bilPlanLab.Size = new System.Drawing.Size(79, 29);
-            this.bilPlanLab.TabIndex = 0;
-            this.bilPlanLab.Text = "label1";
+            this.facebookToolStripMenuItem.Name = "facebookToolStripMenuItem";
+            this.facebookToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facebookToolStripMenuItem.Text = "Facebook";
+            this.facebookToolStripMenuItem.Click += new System.EventHandler(this.facebookToolStripMenuItem_Click);
             // 
-            // bilRzeczLab
+            // mailToolStripMenuItem
             // 
-            this.bilRzeczLab.AutoSize = true;
-            this.bilRzeczLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bilRzeczLab.Location = new System.Drawing.Point(6, 28);
-            this.bilRzeczLab.Name = "bilRzeczLab";
-            this.bilRzeczLab.Size = new System.Drawing.Size(79, 29);
-            this.bilRzeczLab.TabIndex = 1;
-            this.bilRzeczLab.Text = "label1";
+            this.mailToolStripMenuItem.Name = "mailToolStripMenuItem";
+            this.mailToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mailToolStripMenuItem.Text = "Mail";
+            this.mailToolStripMenuItem.Click += new System.EventHandler(this.mailToolStripMenuItem_Click);
+            // 
+            // stronaAutoraToolStripMenuItem
+            // 
+            this.stronaAutoraToolStripMenuItem.Name = "stronaAutoraToolStripMenuItem";
+            this.stronaAutoraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stronaAutoraToolStripMenuItem.Text = "Strona autora";
+            this.stronaAutoraToolStripMenuItem.Click += new System.EventHandler(this.stronaAutoraToolStripMenuItem_Click);
             // 
             // oknoGlowne
             // 
@@ -487,6 +515,9 @@
         private System.Windows.Forms.Label bilPlanLab;
         private System.Windows.Forms.Label bilRzeczLab;
         private System.Windows.Forms.Button odswiezBut;
+        private System.Windows.Forms.ToolStripMenuItem facebookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stronaAutoraToolStripMenuItem;
     }
 }
 

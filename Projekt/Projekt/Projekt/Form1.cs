@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -177,14 +176,23 @@ namespace Projekt
                 bilRzeczLab.ForeColor = Color.Red;
             }
         }
+
+        private void facebookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kontakt.facebook();
+        }
+
+        private void mailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kontakt.mail();
+        }
+
+        private void stronaAutoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kontakt.strona();
+        }
     }
-    class MyViewMode
-    {
-        public DateTime Termin { get; set; }
-        public string Nazwa { get; set; }
-        public double Wartość { get; set; }
-        public string Kategoria { get; set; }
-    }
+    
  
 
 

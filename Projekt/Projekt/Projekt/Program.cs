@@ -5,6 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.Serialization;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Projekt
 {
@@ -71,9 +74,69 @@ namespace Projekt
         }
     }
 
+
     public class WczytZapis
     {
-        //public wczytajZPliku()
+        public static void zapisz(Baza baz, String filePath)
+        {
+            Stream stream = null;
+            try
+            {
+                IFormatter formatter = new BinaryFormatter();
+                stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter.Serialize(stream, baz);
+            }
+            catch
+            {
+                // do nothing, just ignore any possible errors
+            }
+            finally
+            {
+                if (null != stream)
+                    stream.Close();
+            }
+        }
+        public static Baza Wczytaj(String filePath)
+        {
+            Stream stream = null;
+            Baza baz = null;
+            try
+            {
+                IFormatter formatter = new BinaryFormatter();
+                stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.None);
+                int version = (int)formatter.Deserialize(stream);
+                baz = (Baza)formatter.Deserialize(stream);
+            }
+            catch
+            {
+                // do nothing, just ignore any possible errors
+            }
+            finally
+            {
+                if (null != stream)
+                    stream.Close();
+            }
+            return baz;
+        }
+    }
+
+
+
+    public class Kontakt
+    {
+        public static void facebook()
+        {
+            Process.Start("https://www.facebook.com/MariuszBielecki0");
+        }
+        public static void mail()
+        {
+            Process.Start("mailto:maniekb12@gmail.com");
+        }
+        public static void strona()
+        {
+            Process.Start("http://piwnicaprogramisty.pl");
+
+        }
     }
 
     public class Liczymy
@@ -108,6 +171,9 @@ namespace Projekt
             return bil;
         }
     }
+
+
+
     public class PozPlan
     {
         public string nazwa { get; }
@@ -128,5 +194,15 @@ namespace Projekt
             czyWykon = czyWyk;
             kategoria = kat;
         }
+    }
+
+
+
+    class MyViewMode
+    {
+        public DateTime Termin { get; set; }
+        public string Nazwa { get; set; }
+        public double Wartość { get; set; }
+        public string Kategoria { get; set; }
     }
 }
