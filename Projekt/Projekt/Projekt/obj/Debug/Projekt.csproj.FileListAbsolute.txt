@@ -1,7 +1,6 @@
 D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\bin\Debug\Projekt.exe.config
 D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\bin\Debug\Projekt.exe
 D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\bin\Debug\Projekt.pdb
-D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\obj\Debug\Projekt.csprojResolveAssemblyReference.cache
 D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\obj\Debug\Projekt.Properties.Resources.resources
 D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\obj\Debug\Projekt.csproj.GenerateResource.Cache
 D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\obj\Debug\Projekt.exe

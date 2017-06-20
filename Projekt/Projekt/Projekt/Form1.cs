@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Microsoft.VisualBasic;
 namespace Projekt
 {
     
@@ -25,29 +25,9 @@ namespace Projekt
 
         private void oknoGlowne_Load(object sender, EventArgs e)
         {
-            baz = new Baza("baza", 1000);
+            baz = new Baza("baza", 0);
 
-            saldoLab.Text = baz.budżet.ToString();
-
-            najPozGrid.DataSource = baz.pozPlanowane.Select(n => new
-            MyViewMode() { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderBy(b => b.Termin).ToList();
-
-            histPozGrid.DataSource = baz.pozHistoria.Select(n => new MyViewMode()
-            { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderByDescending(b => b.Termin).ToList();
-
-            double xx = Liczymy.bilansPlanowany(baz);
-            double yy = Liczymy.bilansRzeczywisty(baz);
-
-            bilPlanLab.Text = xx.ToString();
-            bilRzeczLab.Text = yy.ToString();
-            if (xx <= 0)
-            {
-                bilPlanLab.ForeColor = Color.Red;
-            }
-            if (yy <= 0)
-            {
-                bilRzeczLab.ForeColor = Color.Red;
-            }
+            refresh();
         }
    
  
@@ -97,16 +77,8 @@ namespace Projekt
                 
 
                 baz.addPozRzecz(x);
-
-                saldoLab.Text = baz.budżet.ToString();
-
-
-                najPozGrid.DataSource = baz.pozPlanowane.Select(n => new MyViewMode()
-                { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderBy(b => b.Termin).ToList();
-
-                histPozGrid.DataSource = baz.pozHistoria.Select(n => new MyViewMode()
-                { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderByDescending(b=>b.Termin).ToList();
-            }
+                refresh();
+              }
             else if (rzeczCheckBox.Checked)
                 MessageBox.Show("Dla pozycji rzeczywistej data nie może być późniejsza niż dzisiaj");
             else if (monthCalendar1.SelectionRange.Start < DateTime.Today)
@@ -119,10 +91,8 @@ namespace Projekt
                     return;
                 }
                 baz.addPozPlan(x);
-               
-                najPozGrid.DataSource = baz.pozPlanowane.Select(n => new MyViewMode()
-                { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderBy(b => b.Termin).ToList();
-            }
+                refresh();
+               }
                 
             
         }
@@ -133,23 +103,29 @@ namespace Projekt
             {
                 baz.pozPlanowane = baz.pozPlanowane.Where(p => p.nazwa != usunTextBox.Text).ToList();
 
-                najPozGrid.DataSource = baz.pozPlanowane.Select(n => new MyViewMode()
-                { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderBy(b => b.Termin).ToList();
+                refresh();
             }
             else
             {
                 baz.pozHistoria = baz.pozHistoria.Where(p => p.nazwa != usunTextBox.Text).ToList();
-                histPozGrid.DataSource = baz.pozHistoria.Select(n => new MyViewMode()
-                { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderByDescending(b => b.Termin).ToList();
+                refresh();
             }
         }
 
         private void wczytajToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Plik dat|*.dat";
-            openFileDialog.Title = "Wczytaj plik budżetu";
-            openFileDialog.ShowDialog();
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Plik dat|*.dat";
+            openFileDialog1.Title = "Wczytaj plik budżetu";
+            openFileDialog1.ShowDialog();
+            Baza bazpom = baz;
+            baz = WczytZapis.wczytaj(openFileDialog1.FileName);
+            if (baz == null)
+            {
+                MessageBox.Show("Nie udało się wczytać pliku");
+                baz = bazpom;
+            }
+            refresh();
         }
 
         private void zapiszToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,9 +134,14 @@ namespace Projekt
             saveFileDialog.Filter = "Plik dat|*.dat";
             saveFileDialog.Title = "Zapisz plik budżetu";
             saveFileDialog.ShowDialog();
+            WczytZapis.zapisz(baz, saveFileDialog.FileName);
         }
 
         private void odswiezBut_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
+        private void refresh()
         {
             double xx = Liczymy.bilansPlanowany(baz);
             double yy = Liczymy.bilansRzeczywisty(baz);
@@ -175,6 +156,15 @@ namespace Projekt
             {
                 bilRzeczLab.ForeColor = Color.Red;
             }
+
+            saldoLab.Text = baz.budżet.ToString();
+
+
+            najPozGrid.DataSource = baz.pozPlanowane.Select(n => new MyViewMode()
+            { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderBy(b => b.Termin).ToList();
+
+            histPozGrid.DataSource = baz.pozHistoria.Select(n => new MyViewMode()
+            { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderByDescending(b => b.Termin).ToList();
         }
 
         private void facebookToolStripMenuItem_Click(object sender, EventArgs e)
@@ -190,6 +180,24 @@ namespace Projekt
         private void stronaAutoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Kontakt.strona();
+        }
+
+        private void zmieńSaldoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Podaj nowe saldo",
+                       "Zmień Saldo",
+                       "0",
+                       500,
+                       300);
+            try
+            {
+                baz.budżet = double.Parse(input); //TODO o tryować takie rzeczy
+            }
+            catch
+            {
+                MessageBox.Show("Nie udało się zmienić salda");
+            }
+            refresh();
         }
     }
     

@@ -74,7 +74,7 @@ namespace Projekt
         }
     }
 
-
+    
     public class WczytZapis
     {
         public static void zapisz(Baza baz, String filePath)
@@ -86,9 +86,9 @@ namespace Projekt
                 stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None);
                 formatter.Serialize(stream, baz);
             }
-            catch
+            catch (Exception err)
             {
-                // do nothing, just ignore any possible errors
+                MessageBox.Show(err.Message);
             }
             finally
             {
@@ -96,20 +96,19 @@ namespace Projekt
                     stream.Close();
             }
         }
-        public static Baza Wczytaj(String filePath)
+        public static Baza wczytaj(String filePath)
         {
             Stream stream = null;
             Baza baz = null;
             try
             {
                 IFormatter formatter = new BinaryFormatter();
-                stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.None);
-                int version = (int)formatter.Deserialize(stream);
+                stream = new FileStream(filePath, FileMode.Open);
                 baz = (Baza)formatter.Deserialize(stream);
             }
-            catch
+            catch(Exception err)
             {
-                // do nothing, just ignore any possible errors
+                MessageBox.Show(err.Message);
             }
             finally
             {
@@ -173,7 +172,7 @@ namespace Projekt
     }
 
 
-
+    [Serializable()]
     public class PozPlan
     {
         public string nazwa { get; }
