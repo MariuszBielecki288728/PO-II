@@ -16,17 +16,16 @@ namespace Projekt
         Baza baz;
         bool pomCzyPl;
         double wys;
+
         public oknoGlowne()
         {
             InitializeComponent();
-
         }
 
 
         private void oknoGlowne_Load(object sender, EventArgs e)
         {
-            baz = new Baza("baza", 0);
-
+            baz = new Baza(0);
             refresh();
         }
    
@@ -41,8 +40,17 @@ namespace Projekt
             }
             else
             {
-                pomCzyPl = Convert.ToDouble(textBox1.Text) < 0;
-                wys = Convert.ToDouble(textBox1.Text);
+                try
+                {
+                    pomCzyPl = Convert.ToDouble(textBox1.Text) < 0;
+                    wys = Convert.ToDouble(textBox1.Text);
+
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+                
 
             }
                 
@@ -63,13 +71,13 @@ namespace Projekt
 
 
 
-                foreach (PozPlan p in baz.pozPlanowane)
+                foreach (PozPlan p in baz.PozPlanowane)
                 {
                   
                     if (p.nazwa == textBox2.Text)
                     {
                         
-                        x = p;
+                        x = p.copy();
                     }
                    
                 }
@@ -85,7 +93,7 @@ namespace Projekt
                 MessageBox.Show("Dla pozycji planowanej data nie może być wcześniejsza niż dzisiaj");
             else
             {
-                if (baz.pozPlanowane.Where(u => u.nazwa == textBox2.Text).ToList().Any())
+                if (baz.PozPlanowane.Where(u => u.nazwa == textBox2.Text).ToList().Any())
                 {
                     MessageBox.Show("Istnieje już pozycja o tej nazwie");
                     return;
@@ -99,17 +107,9 @@ namespace Projekt
 
         private void usunButton_Click(object sender, EventArgs e)
         {
-            if (!usunZHistCheckBox.Checked)
-            {
-                baz.pozPlanowane = baz.pozPlanowane.Where(p => p.nazwa != usunTextBox.Text).ToList();
 
-                refresh();
-            }
-            else
-            {
-                baz.pozHistoria = baz.pozHistoria.Where(p => p.nazwa != usunTextBox.Text).ToList();
-                refresh();
-            }
+            baz.delPozPlan(usunTextBox.Text, usunZHistCheckBox.Checked);
+            refresh();
         }
 
         private void wczytajToolStripMenuItem_Click(object sender, EventArgs e)
@@ -148,22 +148,24 @@ namespace Projekt
 
             bilPlanLab.Text = xx.ToString();
             bilRzeczLab.Text = yy.ToString();
-            if (xx <= 0)
+            if (xx < 0)
             {
                 bilPlanLab.ForeColor = Color.Red;
             }
-            if (yy <= 0)
+            else bilPlanLab.ForeColor = Color.Black;
+            if (yy < 0)
             {
                 bilRzeczLab.ForeColor = Color.Red;
             }
+            else bilRzeczLab.ForeColor = Color.Black;
 
-            saldoLab.Text = baz.budżet.ToString();
+            saldoLab.Text = baz.Budżet.ToString();
 
 
-            najPozGrid.DataSource = baz.pozPlanowane.Select(n => new MyViewMode()
+            najPozGrid.DataSource = baz.PozPlanowane.Select(n => new MyViewMode()
             { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderBy(b => b.Termin).ToList();
 
-            histPozGrid.DataSource = baz.pozHistoria.Select(n => new MyViewMode()
+            histPozGrid.DataSource = baz.PozHistoria.Select(n => new MyViewMode()
             { Termin = n.termin, Nazwa = n.nazwa, Wartość = n.wysokość, Kategoria = n.kategoria }).ToList().OrderByDescending(b => b.Termin).ToList();
         }
 
@@ -191,7 +193,7 @@ namespace Projekt
                        300);
             try
             {
-                baz.budżet = double.Parse(input); //TODO o tryować takie rzeczy
+                baz.Budżet = double.Parse(input); //TODO o tryować takie rzeczy
             }
             catch
             {
@@ -199,6 +201,14 @@ namespace Projekt
             }
             refresh();
         }
+
+        private void nowyBudżetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            baz = new Baza(0);
+            refresh();
+        }
+
+ 
     }
     
  

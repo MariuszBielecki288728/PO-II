@@ -6,3 +6,5 @@ D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Proj
 D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\obj\Debug\Projekt.exe
 D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\obj\Debug\Projekt.pdb
 D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\obj\Debug\Projekt.oknoGlowne.resources
+D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\bin\Debug\Projekt.exe.CodeAnalysisLog.xml
+D:\OneDrive - Uniwersytet Wrocławski\Programowanie Obiektowe\PO-II\Projekt\Projekt\Projekt\bin\Debug\Projekt.exe.lastcodeanalysissucceeded

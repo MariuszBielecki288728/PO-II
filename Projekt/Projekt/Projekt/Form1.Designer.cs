@@ -62,12 +62,13 @@
             this.facebookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stronaAutoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zmieńSaldoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.saldoGroupBox = new System.Windows.Forms.GroupBox();
             this.saldoLab = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.odswiezBut = new System.Windows.Forms.Button();
-            this.zmieńSaldoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nowyBudżetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bilPlanBox.SuspendLayout();
             this.bilRzeczBox.SuspendLayout();
             this.nowyBox.SuspendLayout();
@@ -349,7 +350,8 @@
             this.wczytajToolStripMenuItem,
             this.zapiszToolStripMenuItem,
             this.kontaktToolStripMenuItem,
-            this.zmieńSaldoToolStripMenuItem});
+            this.zmieńSaldoToolStripMenuItem,
+            this.nowyBudżetToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1062, 24);
@@ -401,6 +403,13 @@
             this.stronaAutoraToolStripMenuItem.Text = "Strona autora";
             this.stronaAutoraToolStripMenuItem.Click += new System.EventHandler(this.stronaAutoraToolStripMenuItem_Click);
             // 
+            // zmieńSaldoToolStripMenuItem
+            // 
+            this.zmieńSaldoToolStripMenuItem.Name = "zmieńSaldoToolStripMenuItem";
+            this.zmieńSaldoToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.zmieńSaldoToolStripMenuItem.Text = "Zmień saldo";
+            this.zmieńSaldoToolStripMenuItem.Click += new System.EventHandler(this.zmieńSaldoToolStripMenuItem_Click);
+            // 
             // saldoGroupBox
             // 
             this.saldoGroupBox.Controls.Add(this.saldoLab);
@@ -435,12 +444,12 @@
             this.odswiezBut.UseVisualStyleBackColor = true;
             this.odswiezBut.Click += new System.EventHandler(this.odswiezBut_Click);
             // 
-            // zmieńSaldoToolStripMenuItem
+            // nowyBudżetToolStripMenuItem
             // 
-            this.zmieńSaldoToolStripMenuItem.Name = "zmieńSaldoToolStripMenuItem";
-            this.zmieńSaldoToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.zmieńSaldoToolStripMenuItem.Text = "Zmień saldo";
-            this.zmieńSaldoToolStripMenuItem.Click += new System.EventHandler(this.zmieńSaldoToolStripMenuItem_Click);
+            this.nowyBudżetToolStripMenuItem.Name = "nowyBudżetToolStripMenuItem";
+            this.nowyBudżetToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.nowyBudżetToolStripMenuItem.Text = "Nowy budżet";
+            this.nowyBudżetToolStripMenuItem.Click += new System.EventHandler(this.nowyBudżetToolStripMenuItem_Click);
             // 
             // oknoGlowne
             // 
@@ -528,6 +537,7 @@
         private System.Windows.Forms.ToolStripMenuItem mailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stronaAutoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zmieńSaldoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nowyBudżetToolStripMenuItem;
     }
 }
 
